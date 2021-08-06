@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/1D_array_p2/1D_array_p2.iml" filepath="$PROJECT_DIR$/1D_array_p2/1D_array_p2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1dArrayP2/1dArrayP2.iml" filepath="$PROJECT_DIR$/1dArrayP2/1dArrayP2.iml" />
       <module fileurl="file://$PROJECT_DIR$/BigDecimal/BigDecimal.iml" filepath="$PROJECT_DIR$/BigDecimal/BigDecimal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CanYouAcess/CanYouAcess.iml" filepath="$PROJECT_DIR$/CanYouAcess/CanYouAcess.iml" />
       <module fileurl="file://$PROJECT_DIR$/Comparator/Comparator.iml" filepath="$PROJECT_DIR$/Comparator/Comparator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dequeue/Dequeue.iml" filepath="$PROJECT_DIR$/Dequeue/Dequeue.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/HackerRank.iml" filepath="$PROJECT_DIR$/.idea/HackerRank.iml" />
