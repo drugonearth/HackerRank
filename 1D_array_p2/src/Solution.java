@@ -8,14 +8,16 @@ public class Solution {
 
     private static boolean Search(int leap, int[] game, int ind)
     {
-        if(ind + leap >= game.length || ind + 1 >= game.length) return true;
+
+        if(ind < 0) return false;
+        if(game[ind] != 0) return false;
+        if(ind + leap >= game.length  || ind + 1 == game.length) return true;
+
         game[ind] = 1;
 
-        if(ind < game.length - 1 && game[ind+1] == 0) return Search(leap, game, ind+1);
-        if(game[ind+leap] == 0) return Search(leap, game, ind+leap);
-        if(ind > 0 && game[ind-1] == 0) return Search(leap, game, ind-1);
-
-        return false;
+        return Search(leap, game, ind+1)||
+        Search(leap, game, ind+leap)||
+        Search(leap, game, ind-1);
     }
 
     public static void main(String[] args) {
