@@ -3,8 +3,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 //https://www.hackerrank.com/challenges/java-priority-queue/problem
-//не все тесты
-//компаратор почему-то работает не так
+
 class Student
 {
     int id;
@@ -51,7 +50,11 @@ class Priorities
                 priorityQueue.add(new Student(Integer.parseInt(s[3]), s[1],Double.parseDouble(s[2])));
             }
         }
-        List<Student> students = new ArrayList<>(priorityQueue);
+        List<Student> students = new ArrayList<>();
+        int size = priorityQueue.size();
+        for (int i = 0; i < size; i++) {
+            students.add(priorityQueue.poll());
+        }
         return students;
     }
 }
