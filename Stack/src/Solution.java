@@ -1,6 +1,6 @@
 import java.util.*;
 class Solution{
-
+//https://www.hackerrank.com/challenges/java-stack/problem
     public static void main(String []argh)
     {
         Scanner sc = new Scanner(System.in);

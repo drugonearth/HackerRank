@@ -1,5 +1,5 @@
 import java.util.*;
-
+//https://www.hackerrank.com/challenges/java-1d-array/problem
 public class Solution {
 
     public static boolean canWin(int leap, int[] game) {

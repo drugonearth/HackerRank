@@ -1,7 +1,7 @@
 import java.math.BigDecimal;
 import java.util.*;
 class Solution{
-
+//https://www.hackerrank.com/challenges/java-bigdecimal/problem
     public static void main(String []args){
         //Input
         Scanner sc= new Scanner(System.in);
