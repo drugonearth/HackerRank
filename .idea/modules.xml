@@ -12,7 +12,6 @@
       <module fileurl="file://$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" filepath="$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
       <module fileurl="file://$PROJECT_DIR$/VisitorPattern/VisitorPattern.iml" filepath="$PROJECT_DIR$/VisitorPattern/VisitorPattern.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test_visitor/test_visitor.iml" filepath="$PROJECT_DIR$/test_visitor/test_visitor.iml" />
     </modules>
   </component>
 </project>

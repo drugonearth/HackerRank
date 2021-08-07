@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.io.*;
 import java.util.*;
@@ -96,23 +97,24 @@ class SumInLeavesVisitor extends TreeVis {
 }
 
 class ProductOfRedNodesVisitor extends TreeVis {
-    int product = 1;
+    long product = 1;
 
     public int getResult() {
-        return product;
+        return (int) product;
     }
 
     public void visitNode(TreeNode node) {
-        int k = node.getValue();
-        if(node.getColor()==Color.RED && k!=0)
+        if(node.getColor()==Color.RED)
         {
-            product = Math.abs(product) * k;
-
+            product = (product*node.getValue())%1000000007;
         }
     }
 
     public void visitLeaf(TreeLeaf leaf) {
-        if(leaf.getColor()==Color.RED && leaf.getValue()!=0) product *= leaf.getValue();
+        if(leaf.getColor()==Color.RED)
+        {
+            product = (product*leaf.getValue())%1000000007;
+        }
     }
 }
 
@@ -166,6 +168,8 @@ public class Solution {
                     edges[a][b] = true;
                     edges[b][a] = true;
                 }
+
+                int redCount = 0;
 
                 Tree root = createEdge(edges, values, colors, 0, 1);
 
