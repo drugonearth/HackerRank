@@ -12,6 +12,7 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         MessageDigest md5 = MessageDigest.getInstance("MD5");
+        //MessageDigest sha = MessageDigest.getInstance("SHA-256");
         byte[] bytes = md5.digest(s.getBytes());
         StringBuilder sb = new StringBuilder();
         for (byte b:bytes) {

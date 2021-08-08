@@ -10,7 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/Dequeue/Dequeue.iml" filepath="$PROJECT_DIR$/Dequeue/Dequeue.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/HackerRank.iml" filepath="$PROJECT_DIR$/.idea/HackerRank.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lambda/Lambda.iml" filepath="$PROJECT_DIR$/Lambda/Lambda.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MD5/MD5.iml" filepath="$PROJECT_DIR$/MD5/MD5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MD5(SHA-256)/MD5(SHA-256).iml" filepath="$PROJECT_DIR$/MD5(SHA-256)/MD5(SHA-256).iml" />
       <module fileurl="file://$PROJECT_DIR$/PrimeChecker/PrimeChecker.iml" filepath="$PROJECT_DIR$/PrimeChecker/PrimeChecker.iml" />
       <module fileurl="file://$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" filepath="$PROJECT_DIR$/PriorityQueue/PriorityQueue.iml" />
       <module fileurl="file://$PROJECT_DIR$/Stack/Stack.iml" filepath="$PROJECT_DIR$/Stack/Stack.iml" />
