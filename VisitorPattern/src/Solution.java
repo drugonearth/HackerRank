@@ -141,54 +141,55 @@ class FancyVisitor extends TreeVis {
 public class Solution {
 
     public static Tree solve() {
-                Scanner sc = new Scanner(System.in);
-                int n = sc.nextInt();
-                int[] values = new int[n];
-                Color[] colors = new Color[n];
-                boolean[][] edges = new boolean[n+1][n+1];
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] values = new int[n];
+        Color[] colors = new Color[n];
+        List<Integer>[] edges = new LinkedList[n];
 
 
-                for(int i = 0; i < n; i++)
-                {
-                    values[i] = sc.nextInt();
-                }
 
-                for(int i = 0; i < n; i++)
-                {
-                    int c = sc.nextInt();
-                    if(c == 0) colors[i] = Color.RED;
-                    else colors[i] = Color.GREEN;
-                }
-
-                for(int i = 1; i < n; i++)
-                {
-                    int a = sc.nextInt();
-                    int b = sc.nextInt();
-                    edges[a][b] = true;
-                    edges[b][a] = true;
-                }
-
-                int redCount = 0;
-
-                Tree root = createEdge(edges, values, colors, 0, 1);
-
-                return root;
-            }
-
-    private static Tree createEdge(boolean[][] edges ,int[] values, Color[] colors, int dept, int number){
-        int childCount = 0;
-        TreeNode node = new TreeNode(values[number-1], colors[number-1], dept);
-        for(int i = 0; i < edges.length; i++)
+        for(int i = 0; i < n; i++)
         {
-            if(edges[number][i])
-            {
-                childCount++;
-                edges[number][i] = false;
-                edges[i][number] = false;
-                node.addChild(createEdge(edges, values, colors, dept + 1, i));
-            }
+            values[i] = sc.nextInt();
         }
-        if(childCount > 0) return node;
+
+        for(int i = 0; i < n; i++)
+        {
+            int c = sc.nextInt();
+            if(c == 0) colors[i] = Color.RED;
+            else colors[i] = Color.GREEN;
+        }
+
+        for(int i = 0; i < n; i++)
+        {
+            edges[i] = new LinkedList<>();
+        }
+
+        for(int i = 0; i < n-1; i++)
+        {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            edges[a-1].add(b);
+            edges[b-1].add(a);
+        }
+
+        int redCount = 0;
+
+        Tree root = createEdge(edges, values, colors, 0, 1);
+
+        return root;
+    }
+
+    private static Tree createEdge(List<Integer>[] edges ,int[] values, Color[] colors, int dept, int number){
+        if(edges[number-1].size() != 0) {
+            TreeNode node = new TreeNode(values[number - 1], colors[number - 1], dept);
+            for (int i : edges[number-1] ) {
+                edges[i-1].remove((Integer)number);
+                node.addChild(createEdge(edges ,values, colors, dept + 1, i));
+            }
+            return node;
+        }
         else return new TreeLeaf(values[number-1], colors[number-1], dept);
     }
 
