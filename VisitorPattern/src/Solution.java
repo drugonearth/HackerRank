@@ -6,8 +6,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+//https://www.hackerrank.com/challenges/java-vistor-pattern/problem
 
 enum Color {
     RED, GREEN
