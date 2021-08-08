@@ -1,5 +1,7 @@
 import java.util.*;
+
 //https://www.hackerrank.com/challenges/java-comparator/problem
+
 class Checker implements Comparator<Player>
         {
             public int compare(Player a, Player b) {

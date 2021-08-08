@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
+
 //https://www.hackerrank.com/challenges/java-priority-queue/problem
 
 class Student
